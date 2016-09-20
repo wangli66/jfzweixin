@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <title>积分明细</title>
+    <script src="js/loading.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/icon-main.css">
+</head>
+<body>
+<section class="container">
+    <header class="header">
+        <div class="rel title">
+            <a class="flt color-top" href="javascript:history.go(-1)"> <span class="icon-back"></span>&nbsp;&nbsp;</a>
+            <div class="flt"  id="top-drop">
+                <span class="flt">积分明细</span>
+                <span class="flt icon-xl"></span>
+            </div>
+            <div class="abs xl-con none" id="top-drop-con">
+                <p class="txt"><a href="myintegral.html">我的积分</a></p>
+                <p class="txt"><a id="now-page" href="javascript:;">积分明细</a></p>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="time-filter">
+            <div class="time-tab brd-3" id="top-time">
+                <a class="item now" data-time="1" href="javascript:;">本周</a>
+                <a class="item bor-l" data-time="2" href="javascript:;">本月</a>
+                <a class="item bor-l" data-time="3" href="javascript:;">上个月</a>
+            </div>
+        </div>
+    </header>
+    <section class="integral">
+        <div class="page int-detail">
+            <header class="detail-header box" id="detail-header">
+                <div class="item now" data-status="1"><span class="item-bg item-bg-1 circle f12">拟稿</span></div>
+                <div class="item" data-status="2"><span class="item-bg item-bg-2 circle f12">初审</span></div>
+                <div class="item" data-status="3"><span class="item-bg item-bg-1 circle f12">终审</span></div>
+                <div class="item" data-status="4"><span class="item-bg item-bg-2 circle f12">通过</span></div>
+            </header>
+            <ul class="detail-ul">
+                <li  class="detail-li">
+                    <div class="icon-con flt align-c"><span class="icon-lh"></span></div>
+                    <div class="detail-con flt">
+                        <p class="subtitle f14">好人好事，在公交车上帮助老奶奶</p>
+                        <p class="note f10">
+                            <span class="note-txt">初审人:增添人</span>
+                            <span class="note-txt">终审人:李干</span>
+                            <span class="note-txt">A:10</span>
+                            <span class="note-txt">B:20</span>
+                            <span class="note-txt">虚:100</span>
+                        </p>
+                    </div>
+                    <div class="detail-con2 frl align-r">
+                        <p class="subtitle red f14">待初审</p>
+                        <p class="note f10">3月4日&nbsp;12:08</p>
+                    </div>
+                </li>
+                <li  class="detail-li">
+                    <div class="icon-con flt align-c"><span class="icon-lhb"></span></div>
+                    <div class="detail-con flt">
+                        <p class="subtitle f14">好人好事，在公交车上帮在公交车上在公交车上助老奶奶</p>
+                        <p class="note f10">
+                            <span class="note-txt">初审人:增添人</span>
+                            <span class="note-txt">终审人:李干</span>
+                            <span class="note-txt">A:10</span>
+                            <span class="note-txt">B:20</span>
+                            <span class="note-txt">虚:100</span>
+                        </p>
+                    </div>
+                    <div class="detail-con2 frl align-r">
+                        <p class="subtitle red f14">初审通过</p>
+                        <p class="note f10">3月4日&nbsp;12:08</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</section>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+    Zepto(function($){
+        /*点击筛选时间*/
+        $("#top-time .item").tap(function(){
+            var time = $(this).data("time");
+            var status = $("#detail-header .now").data("status");
+            $.ajax("","",function(data){
+
+            });
+        });
+
+        /*点击筛选状态*/
+        $("#detail-header .item").tap(function(){
+            $(this).addClass("now").siblings().removeClass("now");
+            var status = $(this).data("status");
+            var time = $("#top-time .item").data("time");
+            $.ajax("","",function(data){
+
+            });
+        });
+    });
+</script>
+</body>
+</html>
