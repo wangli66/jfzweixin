@@ -1,0 +1,18 @@
+
+.f50{font-size: 0.5rem;}
+.f40{font-size: 0.4rem;}
+.f30{font-size: 0.3rem;}
+.f25{font-size: 0.25rem;}
+.bor-l{border-left: 1px solid #e5e5e5;}
+.bor-t{border-top: 1px solid #e5e5e5;}
+.bor-r{border-right: 1px solid #e5e5e5;}
+.bor-b{border-bottom: 1px solid #e5e5e5;}
+
+.bor-rb{border-right: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;}
+
+.container{width: 100%; height: 100%; height: 100vh;}
+.index-banner{width: 100%; height: 36%; overflow: hidden; background-color: #D9DFE8;/* background: -moz-linear-gradient(left,#4a5a6a,#4d677e); background: -webkit-linear-gradient(left,#4a5a6a,#4d677e); background: linear-gradient(left,#4a5a6a,#4d677e);*/  /*display:-moz-box;  -moz-box-pack:center;  -moz-box-align:center; display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:center; display:box; box-pack:center;  box-align:center;*/}
+.index-main{width: 100%; height: 64%;}
+.index-main .list{width: 33.333%; height: 33.333%; float: left; box-sizing: border-box; display: block; text-align: center;}
+.index-main .icon{ display: block; height: 62%; display:-moz-box;  -moz-box-pack:center;  -moz-box-align:end; display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:end; display:box; box-pack:center;  box-align:end;}
+.index-main .txt{display: block; font-size: 12px; line-height: 3; }
